@@ -5,7 +5,7 @@ from gql import Client, gql
 
 def publish_blog(PublishPostInput, Hashnode_API_key):
     url = "https://gql.hashnode.com"
-    Hashnode_API_key = "91b39ae2-d0a3-4e3d-b767-c0b897105eb6"
+    Hashnode_API_key = "PAT"
 
     #Graphql Mutation for publishing a new post
     
