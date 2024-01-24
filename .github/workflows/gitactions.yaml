@@ -1,0 +1,13 @@
+name: create-a-blog-post # Name of the Github Actions
+
+run-name: Allowing ${{github.actor}} to learn Github Actions. #Running the name
+
+on:
+  push:
+    branches:
+      -main #Event (Triggers the jobs to be done)
+
+jobs:                                           #Jobs (Tasks)
+  create-a-new-blog-on-Hashnode
+    runs-on: ubuntu-latest
+   
