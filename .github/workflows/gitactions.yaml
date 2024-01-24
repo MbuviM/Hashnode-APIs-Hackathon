@@ -8,6 +8,15 @@ on:
       -main #Event (Triggers the jobs to be done)
 
 jobs:                                           #Jobs (Tasks)
-  create-a-new-blog-on-Hashnode
+  create-a-new-blog-on-Hashnode:
     runs-on: ubuntu-latest
+    steps:
+      #This will run the v4 of the checkout's action. Used when the workflow is using the repo's code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+    
+      - name: Setup Python Environment
+        uses:  actions/setup-python@v2
+        with:
+          python-version: 3.10
    
