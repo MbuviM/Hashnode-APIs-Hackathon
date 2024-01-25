@@ -25,5 +25,5 @@ jobs:                                           #Jobs (Tasks)
       - name: Run Python Script
         run: python "Blog.py"   
         env:
-          Hashnode-API_Key: ${{secrets.Hashnode_API_Key}} 
+          Hashnode-API_Key: ${{secrets.HASHNODE_API_KEY}} 
    
