@@ -12,7 +12,8 @@ if api_auth_key is not None:
 
 else:
     print("Error: HASHNODE_API_KEY is not set.")
- 
+    auth_headers={}
+    
 #Graphql Mutation for publishing a new post
 post_mutation = """
     PublishPost($input: PublishPostInput!) {
@@ -119,3 +120,5 @@ def make_graphql_request(url, headers, json):
     print("An error occurred. Kindly check on it and try again!")
 
   return response
+
+response = make_graphql_request(url=hashnode_url, headers=auth_headers, json=request_payload)
