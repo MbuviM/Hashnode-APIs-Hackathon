@@ -5,7 +5,7 @@ run-name: Allowing ${{github.actor}} to learn Github Actions. #Running the name
 on:
   push:
     branches:
-      -main #Event (Triggers the jobs to be done)
+      -master #Event (Triggers the jobs to be done)
 
 jobs:                                           #Jobs (Tasks)
   create-a-new-blog-on-Hashnode:
@@ -15,8 +15,15 @@ jobs:                                           #Jobs (Tasks)
       - name: Checkout Repository
         uses: actions/checkout@v4
     
-      - name: Setup Python Environment
+      - name: Setup Python Environment         # Install Python and its dependencies
         uses:  actions/setup-python@v2
         with:
           python-version: 3.10
+
+      - name: Install Dependencies
+        run: |
+          pip install requests, gpl
+
+      - name: Run Python Script
+        run: python "Blog.py"    
    
