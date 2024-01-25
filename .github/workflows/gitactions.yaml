@@ -20,7 +20,7 @@ jobs:                                           #Jobs (Tasks)
           
       - name: Install Dependencies
         run: |
-          pip install requests gpl
+          pip install requests gql
 
       - name: Run Python Script
         run: python "Blog.py"    
