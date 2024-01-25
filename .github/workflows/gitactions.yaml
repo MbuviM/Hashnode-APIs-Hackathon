@@ -23,5 +23,7 @@ jobs:                                           #Jobs (Tasks)
           pip install requests gql
 
       - name: Run Python Script
-        run: python "Blog.py"    
+        run: python "Blog.py"   
+        env:
+          Hashnode-API_Key: ${{secrets.Hashnode_API_Key}} 
    
