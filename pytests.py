@@ -1,0 +1,2 @@
+import pytest
+from Blog import make_graphql_request
