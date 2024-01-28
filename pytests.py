@@ -1,5 +1,6 @@
 import pytest
-from Blog import make_graphql_request
+from Blog import *
+import os
 
 # Test for successful blog post
 def test_successful_blog_post():
