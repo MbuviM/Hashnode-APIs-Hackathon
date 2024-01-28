@@ -20,10 +20,17 @@ jobs:                                           #Jobs (Tasks)
           
       - name: Install Dependencies
         run: |
-          pip install requests gql
+          pip install requests gql pytest
 
       - name: Run Python Script
         run: python "Blog.py"   
         env:
           Hashnode-API_Key: ${{secrets.HASHNODE_API_KEY}} 
+
+      - name: Run Python Tests
+        run: pytest pytests
+        env:
+          Hashnode-API_Key: ${{secrets.HASHNODE_API_KEY}} 
+
+     
    
